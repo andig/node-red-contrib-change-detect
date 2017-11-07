@@ -1,0 +1,23 @@
+{
+    "name": "node-red-contrib-change-detect",
+    "version": "0.2.0",
+    "license": "MIT",
+    "repository": "https://github.com/andig/node-red-contrib-change-detect",
+    "keywords": [
+        "node-red",
+        "change detection"
+    ],
+    "node-red": {
+        "nodes": {
+            "change-detect": "change-detect.js"
+        }
+    },
+    "scripts": {
+        "test": "jasmine test/*.js"
+    },
+    "devDependencies": {
+        "clone": "^2.1.1",
+        "jasmine": "^2.8.0",
+        "node-red-contrib-mock-node": "^0.3.0"
+    }
+}

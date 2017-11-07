@@ -1,0 +1,64 @@
+<script type="text/javascript">
+    function hasNumericValue(v) {
+        return ((v === "") || (RED.validators.number(v) && (v >= 0)));
+    }
+
+    RED.nodes.registerType('delta', {
+        category: 'function',
+        color: '#fdd0a2',
+        defaults: {
+            name: {
+                value: ""
+            },
+            minTime: {
+                value: "",
+                validate: hasNumericValue
+            },
+            maxTime: {
+                value: "",
+                validate: hasNumericValue
+            },
+            minDelta: {
+                value: "",
+                validate: hasNumericValue
+            },
+        },
+        inputs: 1,
+        outputs: 2,
+        outputLabels: ["pass", "skip"],
+        icon: "delta.png",
+        label: function() {
+            return this.name || "delta";
+        },
+    });
+</script>
+
+<script type="text/x-red" data-template-name="delta">
+    <div class="form-row">
+        <label for="node-input-name"><i class="icon-tag"></i> Name</label>
+        <input type="text" id="node-input-name" placeholder="Name">
+    </div>
+    <div class="form-row">
+        <label for="node-input-minTime"><i class="icon-tag"></i> Minimum Time Delta</label>
+        <input type="text" id="node-input-minTime" placeholder="minTimeDelta (ms)">
+    </div>
+    <div class="form-row">
+        <label for="node-input-minDelta"><i class="icon-tag"></i> Minimum Value Delta</label>
+        <input type="text" id="node-input-minDelta" placeholder="minValueDelta">
+    </div>
+    <div class="form-row">
+        <label for="node-input-maxTime"><i class="icon-tag"></i> Maximum Time Delta</label>
+        <input type="text" id="node-input-maxTime" placeholder="maxTimeDelta (ms)">
+    </div>
+    <div class="form-row">
+        <label for="node-input-mode"><i class="icon-tag"></i> Conditions Match</label>
+        <select type="select" id="node-input-mode">
+            <option value="OR" default>Any</option>
+            <option value="AND">All</option>
+        </select>
+    </div>
+</script>
+
+<script type="text/x-red" data-help-name="delta">
+    <p>A node that is able to filter messages by detecting delta in payload or timestamp.</p>
+</script>
