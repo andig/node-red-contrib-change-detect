@@ -1,5 +1,4 @@
 # node-red-contrib-change-detect
-
 [![NPM Version](https://img.shields.io/npm/v/node-red-contrib-change-detect.svg)](https://www.npmjs.com/package/node-red-contrib-change-detect)
 [![Build status](https://travis-ci.org/andig/node-red-contrib-change-detect.svg?branch=master)](https://travis-ci.org/andig/node-red-contrib-change-detect)
 [![Donate](https://img.shields.io/badge/Donate-PayPal-green.svg)](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=NSKDAYZFH8H8J)
