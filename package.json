@@ -3,6 +3,7 @@
     "version": "0.2.0",
     "license": "MIT",
     "repository": "https://github.com/andig/node-red-contrib-change-detect",
+    "description": "Change detection node",
     "keywords": [
         "node-red",
         "change detection"
